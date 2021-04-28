@@ -26,6 +26,7 @@ def detail(row_id):
     for row in object_list:
         if row['id'] == row_id:
             return render_template(template, object=row)
+    abort(404)
 
 #Configure Flask to make a page at site's root URL
 if __name__ == '__main__':
